@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>First letters to UPPERCASE</title>
+	<style>
+		body {
+			text-align: center;
+		}
+		
+		p {
+			font-size: 26px;
+			color: #00f;
+		}
+		
+		button {
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 26px;
+			padding: 10px 30px;
+			color: #f00;
+		}
+	</style>
+</head>
+
+<body>
+	<p>Эта функция сделает первую букву каждого слова в предложении заглавной. Разделяйте слова только одним пробелом</p>
+	<button onclick="firstLetterToUpperCase()">Start</button>
+	<script>
+		function firstLetterToUpperCase () {
+			let str = prompt('Введите предложение')
+		
+			str = str.split(' ')
+			
+			for(i = 0; i < str.length; i++) {
+				str.splice(i, 1, str[i][0].toUpperCase() + str[i].slice(1))
+			}
+
+			str = str.join(' ')
+
+			confirm (`Вот результат: ${str}\n\nНажмите OK, если понравилось`)
+		}
+	</script>
+</body>
+</html>
