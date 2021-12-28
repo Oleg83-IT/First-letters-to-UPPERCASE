@@ -27,17 +27,13 @@
 	<button onclick="firstLetterToUpperCase()">Start</button>
 	<script>
 		function firstLetterToUpperCase () {
-			let str = prompt('Введите предложение')
-		
-			str = str.split(' ')
+			let str = prompt('Введите предложение').split(' ')
 			
 			for(i = 0; i < str.length; i++) {
 				str.splice(i, 1, str[i][0].toUpperCase() + str[i].slice(1))
 			}
 
-			str = str.join(' ')
-
-			confirm (`Вот результат: ${str}\n\nНажмите OK, если понравилось`)
+			confirm (`Вот результат: ${str.join(' ')}\n\nНажмите OK, если понравилось`)
 		}
 	</script>
 </body>
